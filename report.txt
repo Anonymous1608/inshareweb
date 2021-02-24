@@ -1,0 +1,8 @@
+1. Users can upload files that will get stored on the database. 
+2. Users will get a unique generated link through which they can access/download files. 
+3. Users can either manually browse files on the Pc or directly Drag and Drop.
+4. Users will also get an option to share via email to anybody.
+5. The generated link of the uploaded file will get expired after 24hrs. 
+6. This webapp is fully responsive i.e it can be viewed from any device (mobile, desktop, laptop)
+7. When the file is being uploaded user will get a cool uploading animation.  
+8. When user clicks the auto generated link, it will automatically copies the link to the clipboard and a toast message will be shown.

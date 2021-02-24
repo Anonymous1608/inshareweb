@@ -21,7 +21,8 @@
     left: 10px;
     width: 150px;
   }
-section.download {
+section.download,
+{
     background: #fff;
     width: 430px;
     max-width: 90%;
@@ -54,3 +55,4 @@ section.download {
   .send-btn-container a:hover {
       background: var(--dark-blue);
   }
+
