@@ -2,9 +2,11 @@
 
 body {
     margin: 0;
-    /*height: 100%;*/
+    height: 100%;
     overflow-y: auto;
-    background-color: #edf5fe;
+    background-image: linear-gradient(120deg, #edf5fe, #e8effc);
+    /*background-image: linear-gradient(to bottom, #8b8ff7, #17d7fa);*/
+    /*background-size: cover;*/
     font-family: system-ui;
 }
 
@@ -29,7 +31,7 @@ body .svg-bottom {
 }
 
 .container {
-    margin: 5rem 0;
+    margin: 10.5rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,6 +180,9 @@ label {
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
+    .container {
+        margin-top: 5rem;
+    }
     .wrapper {
         margin: 0 10px !important;
         padding: 30px;
