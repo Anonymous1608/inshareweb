@@ -2,89 +2,31 @@
   --main-bg-color: #edf5fe;
   --light-blue: #03a9f4;
   --border-color: #0288d147;
-  --container-width: 600px;
+  --container-width: 500px;
 }
 
 body {
   font-family: system-ui;
   background: var(--main-bg-color);
   height: 98vh;
-  overflow-y: auto;
-}
-
-.image-vector {
-  width: 40vw;
-  height: 50vh;
-  background: url(../assets/undraw-upload-1.svg) no-repeat center;
-  background-size: contain;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  background: var(--main-bg-color);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  padding: 2px 6rem;
+  overflow: hidden;
 }
 
 .logo {
-  position: relative;
-  top: -20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
   width: 150px;
-  height: auto;
 }
 
-.navlinks li{
-  display: flex;
-  list-style: none;
+.image-vector {
+  width: 50vw;
+  height: 50vh;
+  background: url(/undraw-upload.svg) no-repeat center;
+  background-size: contain;
 }
 
-.link {
-  background: #adcaff;
-  padding: 0.6rem;
-  font-size: 1.3rem;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #fff;
-}
-.link:hover {
-  opacity: 0.8;
-}
-
-
-.main {
-  margin: 5rem;
-  display: flex;
-  justify-content: center;
-}
-
-@media (max-width: 1080px) {
-  .main {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .main section {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 520px) {
-  nav.navbar {
-    /*display: none;*/
-  }
-}
-
-.main section {
-  margin-left: 4rem;
-}
-
-/*Shivams */
+body,
 .upload-container,
 .drop-zone {
   display: flex;
@@ -98,19 +40,18 @@ body {
 
 .upload-container {
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0px 20px 20px 0px #00000017;
 }
 
 .drop-zone {
   width: var(--container-width);
-  min-height: 390px;
+  min-height: 200px;
   border: 2px dashed var(--border-color);
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 30px;
   transition: 0.2s all ease-in;
 }
-
 
 /* will be added when user drags */
 .drop-zone.dragged {
@@ -161,12 +102,6 @@ body {
 #browseBtn {
   color: #2196f3;
   cursor: pointer;
-}
-
-.wave {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 /* uploading progress styles */
@@ -330,16 +265,14 @@ body {
   transform: translate(50%, 0);
 }
 
+.downlaod__meta {
+  z-index: 199;
+}
+
 @media screen and (max-width: 900px) {
   :root {
-    --container-width: 300px;
+    --container-width: 320px;
   }
-
-  .main {
-    justify-content: flex-start;
-    margin: 5rem 0;
-  }
-
   .image-vector {
     display: none;
   }

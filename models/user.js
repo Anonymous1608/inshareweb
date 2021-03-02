@@ -15,7 +15,7 @@ const UserSchema = new mongoose.Schema({
 	},
 	files_created: {
 		type: Array,
-		default: ['60351384ca231a46a1c70368']
+		default: []
 	},
 	date: {
 		type: Date,

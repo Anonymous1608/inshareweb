@@ -31,7 +31,7 @@ body .svg-bottom {
 }
 
 .container {
-    margin: 10.5rem auto;
+    margin: 3.5rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,6 +102,19 @@ body .svg-bottom {
     /*font-weight: 300;*/
 }
 
+.auth{
+    color: #7d7d7d;
+}
+
+.auth a {
+    color: #ff5454;
+    background: #fff;
+    padding: 0.65rem;
+    border-radius: 5px;
+    margin: 2rem auto auto 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
 .container .wrapper .main-content input:focus {
     border-bottom: 1px #03a9f4 solid;
     outline: none;
@@ -123,7 +136,7 @@ body .svg-bottom {
     display: block;
     width: 150px;
     height: 40px;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     outline: none;
     cursor: pointer;
 }

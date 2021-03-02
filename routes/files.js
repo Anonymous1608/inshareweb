@@ -2,6 +2,7 @@ const router = require('express').Router();
 const multer = require('multer');
 const path = require('path');
 const File = require('../models/file');
+const User = require('../models/user');
 const { v4: uuidv4 } = require('uuid');
 
 let storage = multer.diskStorage({
@@ -19,14 +20,31 @@ router.post('/', (req, res) => {
       if (err) {
         return res.status(500).send({ error: err.message });
       }
+        console.log('Created by ' + req.user);
+        console.log('FILE INFO: ' + req.file.originalname);
         const file = new File({
             filename: req.file.filename,
             uuid: uuidv4(),
             path: req.file.path,
-            size: req.file.size
+            size: req.file.size,
+            ext: req.file.originalname.split('.')[1]
         });
+
         const response = await file.save();
-        res.json({ file: `${process.env.APP_BASE_URL}/files/${response.uuid}` });
+        const fileURL = `${process.env.APP_BASE_URL}/files/${response.uuid}`
+        // Look for the user who created the file and add the file ID to the files_created array
+        User.findOne({ _id: req.user.id }, async (err, user) => {
+           if (user) {
+            console.log('USER FOUND: ' + user);
+            user.files_created.push({ uuid: response.uuid, ext: response.ext });
+            await user.save();
+            res.json({ file: fileURL });
+          } else {
+            req.flash('error_msg', 'Error occurred');
+          }
+          
+        });
+       
       });
 });
 
