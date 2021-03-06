@@ -1,5 +1,5 @@
 // Importing passport-local with Strategy instance
-// for a user authentication mechanism with simple usernam and pass
+// for a user authentication mechanism with simple username and pass
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
